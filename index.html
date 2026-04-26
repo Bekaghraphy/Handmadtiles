@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Concrete Cube | Handmade Cement Tiles</title>
+    <meta
+      name="description"
+      content="A cinematic digital showroom for handmade encaustic cement tiles, crafted by hand and designed for architectural legacy."
+    />
+    <script>
+      const savedTheme = localStorage.getItem("tcc-theme") || "dark";
+      const savedLang = localStorage.getItem("tcc-lang") || "en";
+      document.documentElement.dataset.theme = savedTheme;
+      document.documentElement.lang = savedLang;
+      document.documentElement.dir = savedLang === "ar" ? "rtl" : "ltr";
+    </script>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121212'/%3E%3Cpath d='M18 17h28v8H36v22h-8V25H18z' fill='%23d8b97a'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-light" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-mark" href="#hero" aria-label="The Concrete Cube home">
+        <img class="brand-logo brand-logo-dark" src="assets/logo-handmade-dark.png" alt="The Concrete Cube" />
+        <img class="brand-logo brand-logo-light" src="assets/logo-handmade.png" alt="The Concrete Cube" />
+      </a>
+      <div class="header-actions">
+        <nav aria-label="Primary navigation">
+          <a href="#collection" data-i18n="navCollection">Collection</a>
+          <a href="#custom" data-i18n="navCustomize">Customize</a>
+          <a href="#process" data-i18n="navProcess">Process</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="toggle-cluster" aria-label="Display controls">
+          <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+            <span class="toggle-track" aria-hidden="true"><span></span></span>
+            <span class="theme-label" data-i18n="themeDark">Dark</span>
+          </button>
+          <button class="language-toggle" type="button" aria-label="Toggle Arabic and English language" aria-pressed="false">
+            <span data-lang-label>EN</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero section-dark">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-media-fallback" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="heroEyebrow">Handmade encaustic cement tiles</p>
+          <h1 data-i18n="heroTitle">Crafted by Hand. Designed for Legacy.</h1>
+          <p data-i18n="heroBody">
+            Over 100 heritage and contemporary patterns, 60+ colors, and
+            architectural customization in color, size, and layout.
+          </p>
+          <a class="button primary" href="#collection" data-i18n="heroCta">Explore Collection</a>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <section id="heritage" class="heritage split-section">
+        <figure class="cinema-image reveal">
+          <img src="assets/catalog-p39-0.jpg" alt="Handmade cement tile mold filled with colored cement" />
+        </figure>
+        <div class="section-copy reveal">
+          <p class="eyebrow" data-i18n="heritageEyebrow">Heritage process</p>
+          <h2 data-i18n="heritageTitle">Material memory, made one tile at a time.</h2>
+          <p data-i18n="heritageBody">
+            Each tile is individually formed through a traditional cement
+            process: colored cement is poured into handmade pattern molds,
+            pressed, cured, and finished for decades of use.
+          </p>
+          <div class="metric-row">
+            <div><strong>100+</strong><span data-i18n="metricPatterns">patterns</span></div>
+            <div><strong>60+</strong><span data-i18n="metricColors">colors</span></div>
+            <div><strong>50+</strong><span data-i18n="metricLife">year life</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collection" class="collection section-dark">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="collectionEyebrow">Interactive collection</p>
+          <h2 data-i18n="collectionTitle">Architectural families, built for variation.</h2>
+        </div>
+        <div class="collection-grid" aria-label="Tile collection categories">
+          <button class="collection-tile reveal" data-preview="Running" data-preview-ar="الممتدة" data-image="assets/tile-05.jpg">
+            <img src="assets/tile-05.jpg" alt="" />
+            <span data-i18n="catRunning">Running</span>
+          </button>
+          <button class="collection-tile reveal" data-preview="Geometric" data-preview-ar="الهندسية" data-image="assets/tile-08.jpg">
+            <img src="assets/tile-08.jpg" alt="" />
+            <span data-i18n="catGeometric">Geometric</span>
+          </button>
+          <button class="collection-tile reveal" data-preview="Motif" data-preview-ar="الزخارف" data-image="assets/tile-04.jpg">
+            <img src="assets/tile-04.jpg" alt="" />
+            <span data-i18n="catMotif">Motif</span>
+          </button>
+          <button class="collection-tile reveal" data-preview="Hexagon" data-preview-ar="السداسية" data-image="assets/catalog-p35-0.jpg">
+            <img src="assets/catalog-p35-0.jpg" alt="" />
+            <span data-i18n="catHexagon">Hexagon</span>
+          </button>
+          <button class="collection-tile reveal" data-preview="Abstratchi" data-preview-ar="أبستراتشي" data-image="assets/tile-07.jpg">
+            <img src="assets/tile-07.jpg" alt="" />
+            <span data-i18n="catAbstratchi">Abstratchi</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="custom" class="customizer">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="customEyebrow">Customization experience</p>
+          <h2 data-i18n="customTitle">Color, pattern, scale, and rhythm without compromise.</h2>
+        </div>
+        <div class="custom-shell reveal">
+          <div class="config-panel">
+            <div class="control-group">
+              <span data-i18n="controlPattern">Pattern</span>
+              <div class="segmented" role="group" aria-label="Select pattern">
+                <button class="is-active" data-pattern="arc" data-i18n="patternArc">Arc</button>
+                <button data-pattern="cross" data-i18n="patternCross">Cross</button>
+                <button data-pattern="diamond" data-i18n="patternDiamond">Diamond</button>
+              </div>
+            </div>
+            <div class="control-group">
+              <span data-i18n="controlLayout">Layout</span>
+              <div class="segmented" role="group" aria-label="Select layout">
+                <button class="is-active" data-layout="grid" data-i18n="layoutGrid">Grid</button>
+                <button data-layout="rotated" data-i18n="layoutRotated">Rotated</button>
+                <button data-layout="repeat" data-i18n="layoutRepeated">Repeated</button>
+              </div>
+            </div>
+            <div class="control-group">
+              <span data-i18n="controlPalette">Palette</span>
+              <div class="swatch-row" aria-label="Select tile color">
+                <button style="--swatch: #d8b97a" data-color="#d8b97a" aria-label="Warm gold"></button>
+                <button style="--swatch: #6f8c83" data-color="#6f8c83" aria-label="Sage green"></button>
+                <button style="--swatch: #a64f42" data-color="#a64f42" aria-label="Oxide red"></button>
+                <button style="--swatch: #2f5f75" data-color="#2f5f75" aria-label="Mineral blue"></button>
+                <button style="--swatch: #ece6d8" data-color="#ece6d8" aria-label="Bone white"></button>
+              </div>
+            </div>
+          </div>
+          <div class="space-visual">
+            <img src="assets/catalog-p05-0.jpg" alt="Residential room with handmade patterned cement floor" />
+            <div class="tile-preview" data-pattern="arc" data-layout="grid" aria-label="Live tile preview">
+              <div class="tile-unit"></div>
+              <div class="tile-unit"></div>
+              <div class="tile-unit"></div>
+              <div class="tile-unit"></div>
+              <div class="tile-unit"></div>
+              <div class="tile-unit"></div>
+              <div class="tile-unit"></div>
+              <div class="tile-unit"></div>
+              <div class="tile-unit"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="material" class="material section-dark">
+        <canvas id="material-canvas" aria-hidden="true"></canvas>
+        <div class="material-copy reveal">
+          <p class="eyebrow" data-i18n="materialEyebrow">Grooved / 3D texture</p>
+          <h2 data-i18n="materialTitle">Depth that changes with light.</h2>
+          <p data-i18n="materialBody">
+            Grooved tiles bring shadow, relief, and hand-finished texture into
+            walls, facades, and architectural details.
+          </p>
+        </div>
+      </section>
+
+      <section id="applications" class="applications">
+        <article class="application-panel">
+          <img src="assets/hospitality-bar.png" alt="Cinematic hospitality bar with richly patterned handmade tiles" />
+          <div><span data-i18n="appHospitality">Hospitality</span><strong data-i18n="appHospitalityTitle">Atmosphere with permanence.</strong></div>
+        </article>
+        <article class="application-panel">
+          <img src="assets/catalog-p04-0.jpg" alt="Geometric handmade cement tile wall in a residential setting" />
+          <div><span data-i18n="appResidential">Residential</span><strong data-i18n="appResidentialTitle">Rooms with quiet character.</strong></div>
+        </article>
+        <article class="application-panel">
+          <img src="assets/catalog-p09-0.jpg" alt="Geometric handmade cement tile floor detail" />
+          <div><span data-i18n="appCommercial">Commercial</span><strong data-i18n="appCommercialTitle">Pattern systems for daily use.</strong></div>
+        </article>
+      </section>
+
+      <section id="process" class="process section-dark">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="processEyebrow">Handmade story</p>
+          <h2 data-i18n="processTitle">Four gestures. One enduring surface.</h2>
+        </div>
+        <div class="process-track">
+          <article class="process-step reveal">
+            <span>01</span>
+            <h3 data-i18n="stepMold">Mold filling</h3>
+            <p data-i18n="stepMoldBody">Colored cement is placed by hand into the pattern mold.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>02</span>
+            <h3 data-i18n="stepPress">Pressing</h3>
+            <p data-i18n="stepPressBody">Layered cement is compressed for density and strength.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>03</span>
+            <h3 data-i18n="stepCure">Curing</h3>
+            <p data-i18n="stepCureBody">The tile rests slowly, gaining character and resilience.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>04</span>
+            <h3 data-i18n="stepFinish">Finishing</h3>
+            <p data-i18n="stepFinishBody">Edges, surface, and shade are checked before selection.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="colors" class="color-system">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="colorsEyebrow">Color system</p>
+          <h2 data-i18n="colorsTitle">Sixty-plus tones, tuned for architectural palettes.</h2>
+        </div>
+        <div class="color-lab reveal">
+          <div class="large-tile" aria-hidden="true"></div>
+          <div class="palette-cloud" aria-label="Interactive color palette"></div>
+        </div>
+      </section>
+
+      <section class="final-cta section-dark">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="ctaEyebrow">Private design support</p>
+          <h2 data-i18n="ctaTitle">Design Your Space</h2>
+          <a class="button primary" href="#contact" data-i18n="ctaButton">Start a Consultation</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div>
+        <a class="brand-mark" href="#hero" aria-label="The Concrete Cube home">
+          <img class="brand-logo brand-logo-dark" src="assets/logo-handmade-dark.png" alt="The Concrete Cube" />
+          <img class="brand-logo brand-logo-light" src="assets/logo-handmade.png" alt="The Concrete Cube" />
+        </a>
+        <p data-i18n="footerBody">Handmade cement tiles for architects, designers, developers, and premium residences.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:studio@theconcretecube.com">studio@theconcretecube.com</a>
+        <a href="tel:+200000000000">+20 000 000 0000</a>
+      </div>
+    </footer>
+
+    <dialog class="preview-modal" aria-label="Collection preview">
+      <button class="modal-close" aria-label="Close preview">&times;</button>
+      <img alt="" />
+      <div>
+        <p class="eyebrow" data-i18n="modalEyebrow">Collection preview</p>
+        <h2></h2>
+        <p data-i18n="modalBody">Customizable in color, size, pattern, and installation rhythm.</p>
+      </div>
+    </dialog>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
